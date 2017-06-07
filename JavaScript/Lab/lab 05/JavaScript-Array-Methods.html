@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Array Methods</title>
+    <script type="text/javascript">
+
+        //create the month array
+
+        var monthName;
+        monthName = new Array(
+
+        "January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "Octomber",
+            "November", "December");
+
+        //return the number of elements in the monthName array
+        document.writeln("The array size is" + monthName.length + "elements");
+
+        //display the monthName
+        document.writeln("<br /> The original array elements are: ");
+        for (var count = 0; count < monthName.length; count++) {
+
+            document.writeln(monthName[count]);
+            //document.writeln("< br /> ");
+
+        }
+
+        //reducing the array size to 3 
+        
+        monthName.length = 3;
+        document.writeln("< br /> ");
+        document.writeln("The array size after reducing its length is" + monthName.length + "elements");
+
+
+        //reversing the array elements
+        document.writeln("<br />");
+        document.writeln("The reversing array elements are: ");
+        monthName.reverse();
+        document.writeln("<br />");
+        for (var count = 0; count < monthName.length; count++) {
+            document.writeln(monthName[count]);
+        }
+
+
+        //sorting the array 
+        document.writeln("< br />");
+        document.writeln("< br /> The sorting array elements");
+        var numArray = [3, 45, 1234, 24];
+        document.writeln("<br /> Sorting Numerical Values: " + numArray.sort(numSort));
+
+        //creating the numSort() compare function
+        function numSort(num1, num2) {
+
+            return num1 - num2;
+
+        }
+
+        //resorting the size of monthName
+
+        monthName = new Array(
+        "January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "Octomber",
+            "November", "December");
+        //extract summer months from the monthName array
+        //array_name.method_name
+        //array_name.slice(start, stop)
+        var summerMonth = monthName.slice(5, 8);
+        document.writeln("br /> Summer months are " + summerMonth);
+
+        //extract and remove winter months from monthName array 
+        var winterMonth = monthName.splice(0, 3);
+        document.writeln("<br/> Winter months are" + winterMonth);
+
+        //Original array 
+        document.writeln("<br/> The original array elemnts after using the splice method is: ");
+        for (var count = 0; count < monthName.length; count++) {
+
+            document.writeln(monthName[count]);
+            //document.writeln("<br/>");
+
+        }
+
+
+        //return the number of the elements in the monthName array 
+
+        document.writeln("The array size is " + monthName.length + "elements.");
+
+        // inserting array elements
+        var alpha = new Array("a", "b", "c", "d");
+
+        //adding new items to the end of the array alpha
+
+        alpha.push("e", "f");
+        document.writeln("<br />");
+        for (var count = 0; count < alpha.length; count++) {
+            document.writeln(alpha[count]);
+        }
+        
+
+        //removing the last element from alpha array 
+
+        alpha.pop();
+        document.writeln("<br />");
+        for (var count = 0; count < alpha.length; count++) {
+            document.writeln(alpha[count]);
+        }
+
+        //removing the first  element from alpha array 
+
+        alpha.shift();
+        document.writeln("<br />");
+        for (var count = 0; count < alpha.length; count++) {
+            document.writeln(alpha[count]);
+        }
+
+        //adding items at the start of alpha array
+
+        alpha.unshift("x", "y", "z");
+        document.writeln("<br />");
+        for (var count = 0; count < alpha.length; count++) {
+            document.writeln(alpha[count]);
+        }
+
+        //joining (concattinating) arrays 
+        var array1 = new Array("A", "B", "C");
+        var array2 = new Array("D", "F");
+        var array3;
+
+        array3 = array1.concat(array2);
+        for (var count = 0; count < array3.length; count++) {
+            document.writeln(array3[count]);
+        }
+
+        //joining three arrays 
+        var array4 = [1, , 2, 3];
+        array3 = array1.concat(array2, array4);
+        document.writeln("<br />");
+
+        for (var count = 0; count < array3.length; count++) {
+            document.writeln(array3[count]);
+        }
+
+
+        document.writeln("<br />");
+        //joining elements of an array as a single string 
+        var strArray = new Array("Alpha", "Beta", "Gamma");
+        document.writeln(strArray.join(" and "));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+   
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX Demo</title>
+    <script type="text/javascript">
+        /* TO DO
+        1. create an XMLHttpRequest object (xhr)
+        2. use the open() method to configure the object
+        3. connect an asynchronous JavScript function to handle the download to the XMLHttpRequest object by using onReadyStateChange property
+        4. send the hhtp request to the server. Because you are using the get method to fetch the data, you send an argument of null to the server to start the data download
+        */
+
+        //1. create an XMLHttpRequest object (xhr)
+        var xhr = false;
+
+        //2. check if the browser can open xhr
+        if (window.XMLHttpRequest) {
+            window.alert("Using the XMLHttpRequest object");
+            //initialize the xhr
+            xhr = new XMLHttpRequest;
+        }
+        else if (window.ActiveXObject) {
+            window.alert("Using the ActiveXObject object");
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        // create the getData() function
+        /* getData() takes 2 arguments:
+         a) the name of the file to fetch from the server
+         b) the ID of an HTML element to display the result
+         */
+        function getData(dataSource, divID) {
+            // check if you've anable to create a valid XMLHttpRequest object
+            if (xhr) {
+                var obj = document.getElementById(divID);
+
+                //open the xhr object
+                //syntax: open("method", "URL" [, asyncFlag [, "username" [,"Password"]]] )
+                xhr.open("get", dataSource, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        obj.innerHTML = xhr.responseText;
+                    }
+                }; // end anonymous function
+
+                // send an http request to the server
+                xhr.send(null);
+            }
+
+            else {
+                obj.innerHTML = " Sorry, your browser can't do AJAX";
+            } // end else block
+        } // end getData() function
+
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="birdForm" id="birdForm">
+        <input type="button" value="Fetch the text message" onclick="getData('data/data.txt', 'targetDiv');" />
+    </form>
+    <div id="targetDiv">
+        <figure>
+            <img src="Bird_images/bird_01.jpg" alt="Bird in the forest" title="Bird in the forest" width="200" height="130">
+            <figcaption>Beautiful bird in the forest</figcaption>
+        </figure>
+        <p>The fetched message from the server will apear here</p>
+    </div>
+</body>
+</html>

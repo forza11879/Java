@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Change color using jQuery</title>
+    <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        function changeColors() {
+            $('tr:odd').css('background-color', '#ccc');
+
+/*
+            $("td").each(function () {
+                $(this).css("background-color", "#ff0");
+
+            });*/
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Left Column</td>
+            <td>Right Column</td>
+        </tr>
+        <tr>
+            <td>Left Column</td>
+            <td>Right Column</td>
+        </tr>
+        <tr>
+            <td>Left Column</td>
+            <td>Right Column</td>
+        </tr>
+
+
+    </table>
+    <p>
+        <a href="#" onclick="return changeColors();">Click to change colors</a>
+
+    </p>
+
+</body>
+</html>

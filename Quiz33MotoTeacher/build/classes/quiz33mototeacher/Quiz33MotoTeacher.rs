@@ -1,0 +1,14 @@
+quiz33mototeacher.Bicycle
+quiz33mototeacher.Bus
+quiz3motosolution.Bus
+quiz33mototeacher.Transport
+quiz33mototeacher.InvalidInputDataException
+quiz3motosolution.Motorbike
+quiz3motosolution.Bicycle
+quiz33mototeacher.Car
+quiz3motosolution.Quiz3MotoSolution
+quiz33mototeacher.Motorbike
+quiz33mototeacher.Quiz33MotoTeacher
+quiz3motosolution.Transport
+quiz3motosolution.InvalidInputDataException
+quiz3motosolution.Car

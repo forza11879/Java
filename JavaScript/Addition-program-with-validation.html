@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+
+
+        //Prompt the user to enter two numbers and display the sum
+
+
+        //1.Declaration Phase
+
+        var firsNumber; //first number entered by user as a string
+        var secondNumber; //first number entered by user as a string
+        var number1; //coverted first number
+        var number2; //coverted second number
+        var sum; // sum
+
+        //2.Initialization Phase
+
+        //read first number from user as a string
+
+        //ensure that the value is numerical
+
+        while (isNan(firsNumber = window.promt("Please enter First Number", "0"))) {
+
+            window.alert("You have entered" + firsNumber + "Please enter a valid first number")
+
+        } //end while loop
+
+
+        while (isNan(secondNumber = window.promt("Please enter Second Number", "0"))) {
+
+            window.alert("You have entered" + secondNumber + "Please enter a valid second number")
+
+        } //end while loop
+
+        //3.Processing Phase
+
+
+        number1 = parseFloat(firsNumber);
+
+        number2 = parseFloat(secondNumber);
+
+        //add number1 and number2 to sum
+
+        sum = number1 + number2;
+
+        //4.Termination Phase
+        document.writeln("<h2> the sum is " + sum.toPrecision(5) + "</h2>");
+        document.writeln("<h2> the sum of " + number1 + number2 + "is" + sum + "</h2>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Interest Rate</title>
+    <style type="text/css">
+
+        table {
+            width:300px;
+            border-collapse:collapse;
+            background-color:lightblue;
+            
+        }
+
+        table, td, th {
+
+            border:1px solid #000;
+            padding:4px;
+
+        }
+
+        th {
+
+            text-align:left;
+            color:white;
+            background-color:darkblue;
+
+        }
+
+
+        tr.oddrow {
+
+            background-color:white;
+
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+//declare variable 
+
+
+    var principal; //principal amount
+    var RATE; //anual rate
+    var amount; //the amounton deposit at the end of the nth year
+    var principal1; //principal amount
+    var RATE1; //anual rate
+    var amount1; //the amounton deposit at the end of the nth year
+    var count;
+    var count1;
+
+        //Initialiazation
+
+    
+
+
+    principal1 = window.prompt("Enter the principal amount", "0");
+    principal = parseFloat(principal1);
+
+
+    count1 = window.prompt("Enter the number of years", "0");
+    count = parseInt(count1);
+
+
+    RATE1 = window.prompt("Enter the interest rate", "0");
+    RATE = parseFloat(RATE1);
+
+    
+
+    document.writeln("<table"); //begin the table
+    document.writeln("<caption> Calculating Compound Interest</caption>");
+    document.writeln("<thead><tr><th>Year</th>");// year column heading
+    document.writeln("<th>Amount on Deposit</th>");
+    document.writeln("</tr></thead><tbody>");
+    
+        //processing
+
+    for (var year = 1; year <= count; year++) {
+
+        amount = principal * Math.pow(1.0 + RATE, year);
+
+        if(year % 2 !==0){
+            document.writeln("<tr class ='oddrow'><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>");
+        } else {
+            document.writeln("<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>");
+
+        }
+
+    }
+        //close tbody and table tags
+    document.writeln("</tbody></table>");
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

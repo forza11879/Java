@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        //1.Declaration Phase
+        var firstNumber;
+        var secondNumber;
+        var number1;
+        var number2;
+        var sum;
+        sum = 0;
+        //read first number from the user
+        //ensure that the value is numerical
+        while (isNaN(firstNumber = window.prompt("Please, enter First Number", "0"))) {
+            window.alert("You have entered " + firstNumber + " . Please, enter a number");
+        } //end while loop
+        //read second number from the user
+        while (isNaN(secondNumber = window.prompt("Please, enter Second Number", "0"))) {
+            window.alert("You have entered " + secondNumber + " . Please, enter a number");
+        } //end while loop
+        //3. Processing Phase
+        number1 = parseFloat(firstNumber);
+        number2 = parseFloat(secondNumber);
+        //add number1 and number2 to sum
+        sum = number1 + number2;
+        //4. Termination Phase
+        document.writeln("<h2> The Sum of " + firstNumber + " and " + secondNumber + " is: " + sum + "</h2>");
+    </script>
+</head>
+<body>
+    <p>this page display the Summ of 2 numbers entered by user</p>
+</body>
+</html>

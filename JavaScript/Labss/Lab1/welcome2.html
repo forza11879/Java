@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Using window.promt method</title>
+    <script type="text/javascript">
+        // 1.Declaration face
+        var name;  //string entered by user
+        var message = " Welcome to javaScript Programming!";
+        var output;
+
+        // 2. Initialization Phase
+        name = window.prompt("Please, enter your name", "John");
+
+        // 3. Processing phase
+        output = "Hello " + name + "," + message;
+
+        // 4. Termination (output) phase
+        document.write(output);
+
+    </script>
+</head>
+<body>
+    <p>Click F5 or refresh</p>
+</body>
+</html>

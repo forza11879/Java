@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greeting Message</title>
+    <script type="text/javascript">
+        var tempFahr; // temperature in Fahrengeit entered by user
+        var tempCelc; // temperature in Celcius
+
+        tempFahr = prompt("Please enter a temperature in fahrengeit", '0');
+        tempFahr = parseFloat(tempFahr);
+
+        tempCelc = 5 / 9 * (tempFahr - 32);
+        
+        document.writeln("<h1>Your temperature in fahrengeit  " + tempFahr + "\xB0 is equal to " + tempCelc.toFixed(2) + "\xB0 in Celcius</h1>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

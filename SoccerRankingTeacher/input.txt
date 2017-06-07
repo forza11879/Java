@@ -1,0 +1,6 @@
+Russia;3;2
+France;5;8
+Germany;7;4
+Poland;4;4
+Romania;3;1
+Brazil;2;3

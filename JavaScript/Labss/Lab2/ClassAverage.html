@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Class Average</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+           //1.Declaration Phase
+           var total; //sum of grades
+           var gradeCounter, // number of grades entered
+               grade, // grade typed by a user (as a string)
+               gradeValue, // grade value converted to number
+               average, // average of all grades
+               gradeNumber; //number of grade entered
+           //2.Initialization
+           total = 0;
+           gradeCounter = 1; // prepare for loop
+           // 3. Processing Phase
+           gradeNumber = window.prompt("How many grades you'd like to enter?");
+           gradeNumber = parseInt(gradeNumber);
+           while (gradeCounter <= gradeNumber){
+               // promt to input and read grate from user
+               grade = window.prompt("Enter the Grade", "0");
+               // convert grade from a string to a number (parseInt or parseFloat)
+               gradeValue = parseFloat(grade);
+               // add gradeValue to  total
+               total = total + gradeValue;
+               // add 1 to gradeCounter
+               gradeCounter++;
+           } // end while loop
+            // 4. Termination phase
+            average = total / gradeNumber; //calcul the average
+            //display the average
+            document.writeln("<h2> the class average is: " + average.toFixed(3) + "</h2>");
+            document.writeln("<h2> the class average is: " + average.toPrecision(2) + "</h2>");
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

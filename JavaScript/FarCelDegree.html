@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Fahrenheit temperature</title>
+    <script type="text/javascript">
+
+        //1. Declaration
+        var tempFar; // string entered by the user
+        var tempCel; //store date object
+
+        var tempFar1;
+
+
+
+        //2.Initialization
+
+       /* while (isNan(tempFar = window.promt("Please eneter Fahrenheit temperature", "0"))) {
+
+            window.alert("You have entered" + tempFar + "Please enter a valid first number")
+
+        } //end while loop*/
+
+        tempFar = window.prompt("Enter the Fahrenheit (°F) degree", "0");
+
+        tempFar1 = parseInt(tempFar);
+
+
+        tempCel = 5 / 9 * (tempFar1 - 32);
+
+
+
+        //3. Processing
+        // determine if it is morning
+        if (tempCel < 0) {
+
+            document.writeln("<h2>That's below the freezing point of water" + tempCel.toPrecision(6) + " Celcius degree</h2>");
+
+        } else if (tempCel >= 100) {
+
+            document.writeln("<h2>That is the boling point of water " + tempCel.toPrecision(6) + " Celcius degree </h2>");
+        } else document.writeln("<h2>The water temperature in Celcius is: <h2>" + tempCel.toPrecision(6));
+
+
+
+        //4. Output
+        document.writeln("<h2>The water temperature in Fahrenheit is: " + tempFar1.toPrecision(6) + "<h2>" );
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

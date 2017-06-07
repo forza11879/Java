@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Interest rate</title>
+    <style type="text/css">
+        table {
+            width: 300px;
+            border-collapse:collapse;
+            background-color: lightblue;
+        }
+        table, td, th {
+            border:1px solid black;
+            padding:4px;
+        }
+        th {
+            text-align:left;
+            color:white;
+            background-color:darkblue;
+        }
+        tr.oddrow {
+            background-color:white;
+        }
+    </style>
+    <script type="text/javascript">
+        //declare and initialize
+        var principal; //1000$ on hand to invest
+        var RATE;//rate annual
+        var amount; // ammount on deposit at the end of the year
+
+
+        principal = window.prompt("Enter the ammount of money to deposit: ");
+        principal = parseFloat(principal);
+        RATE = window.prompt("Enter the annual rate: ");
+        RATE = parseFloat(RATE);
+        yearByUser = window.prompt("How many years?");
+        yearByUser = parseInt(yearByUser);
+
+
+        document.writeln("<table"); // begin the table
+        document.writeln("<caption>Calculating Compound Interest<caption>");
+        document.write("<thead><tr><th>Year</th>"); //year column heading
+        document.writeln("<th>Amount on Deposit</th>");
+        document.writeln("</tr></thead><tbody>");
+        
+        //processing
+        for (var year = 1; year <= yearByUser; year++) {
+            amount = principal * Math.pow(1.0 + RATE, year);
+
+            if (year % 2 !== 0) {
+                document.writeln("<tr class='oddrow'><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>");
+            } else {
+                document.writeln("<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>");
+            }// end for loop
+        }//close tbody and table tags
+        document.writeln("</tbody></table>");
+        
+     </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

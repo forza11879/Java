@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+
+
+    //Prompt the user to enter two numbers and display the sum
+
+
+    //1.Declaration Phase
+
+    var firsNumber; //first number entered by user as a string
+    var secondNumber; //first number entered by user as a string
+    var number1; //coverted first number
+    var number2; //coverted second number
+    var sum; // sum
+
+        //2.Initialization Phase
+    firsNumber = 0;
+    secondNumber = 0;
+
+        //3.Processing Phase
+
+    firsNumber = window.prompt("Enter the first number");
+    number1 = parseFloat(firsNumber);
+
+    secondNumber = window.prompt("Enter the second number");
+    number2 = parseFloat(secondNumber);
+
+    sum = number1 + number2;
+
+        //4.Termination Phase
+    document.writeln("<h2> the sum is " + sum.toPrecision(5) + "</h2>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

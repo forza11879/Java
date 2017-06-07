@@ -1,0 +1,8 @@
+manypeople.Person
+manypeopleteacher.Person
+manypeopleteacher.Teacher
+manypeople.ManyPeople
+manypeople.Teacher
+manypeopleteacher.Student
+manypeopleteacher.ManyPeopleTeacher
+manypeople.Student

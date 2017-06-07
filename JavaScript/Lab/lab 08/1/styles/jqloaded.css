@@ -1,0 +1,19 @@
+﻿body{
+    font-family:'Times New Roman', Times, serif;
+    font-size:12px;
+    }
+
+p{
+    color:red;
+    border:1px solid red;
+    padding:5px;
+    margin:5px;
+    }
+
+p.FrameworkLoaded{
+
+    color:darkgreen;
+    border:1px solid darkgreen;
+
+
+}

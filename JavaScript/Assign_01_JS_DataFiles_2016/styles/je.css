@@ -1,0 +1,136 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*
+   JavaScript & AJAX Assignment 01
+   Developed By: Ion Leahu
+   Developed Date:  12/13/2016
+   Filename: je.css
+   This file contains styles used in the worldTime.html file.
+*/
+
+body {
+	max-width: 664px;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px solid gray;
+    padding-left:2px;
+    
+}
+
+
+
+#headbar {
+    width: 650px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: center;
+    color: blue; 
+    margin: 5px;
+}
+
+table {
+    width: 100%; 
+    margin-top: 0px; 
+    border-top: 0px;
+}
+
+th {
+    border: 1px solid black; 
+    font-weight: normal; 
+    font-family: monospace;
+}
+
+td {
+    font-size: 10pt; 
+    width: 33%; 
+    vertical-align: top; 
+    padding: 5px; 
+    border: 1px solid black; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    font-size: 9pt; 
+    font-family: monospace; 
+    border: 1px solid black;
+}
+
+#timemap {
+   position: relative; 
+   top: 0px; 
+   left: 0px; 
+   width: 655px;
+}
+
+#place1, #name1, #Houston_Office {
+    background-color: lightgray;
+    //border-style: solid;
+    //border-width: 1px;
+}
+#place1 {
+    position: absolute; 
+    top: 191px; 
+    left: 126px;
+}
+
+#place2, #name2, #London_Office {
+    background-color: white;
+   // border-style: solid;
+    //border-width: 1px;
+}
+#place2 {
+    position: absolute; 
+    top: 129px; 
+    left: 303px;
+}
+
+
+#place3, #name3, #NY_Office {
+    background-color: #f7f7c8;
+   // border-style: solid;
+    //border-width: 1px;
+}
+#place3 {
+    position: absolute; 
+    top: 158px; 
+    left: 176px}
+
+#place4, #name4, #Seattle_Office {
+    background-color: #91f7f7;
+   // border-style: solid;
+   // border-width: 1px;
+}
+#place4 {
+    position: absolute; 
+    top: 174px; 
+    left: 44px;
+}
+
+#place5, #name5, #Sydney_Office {
+    background-color: pink;
+   // border-style: solid;
+    //border-width: 1px;
+}
+
+#place5 {
+    position: absolute; 
+    top: 303px; 
+    left: 578px;
+}
+
+#place6, #name6, #Tokyo_Office {
+    background-color: #cece9c;
+    //border-style: solid;
+    //border-width: 1px;
+}
+
+#place6 {
+    position: absolute; 
+    top: 172px; 
+    left: 557px;
+}
+
+
+
